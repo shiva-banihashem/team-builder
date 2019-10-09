@@ -4,7 +4,9 @@ const MemberForm = props => {
   
   
   
-  const [member, setMember] = useState({})
+  const [member, setMember] = useState({
+    name: "", email: ""
+  })
   
   
   useEffect(() => {
