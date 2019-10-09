@@ -25,11 +25,29 @@ function App() {
     const newArray = members.filter(member => {
       return member.id === id;
     });
+   
     
-    SetMemberToEdit(newArray);
+    
+    SetMemberToEdit(newArray[0]);
   };
 
+  const updateMember = memberEdited =>{
     
+    const newArray=members.map((member)=> {
+       if (Number(member.id) === Number(memberEdited.id)){
+         member.name = memberEdited.name;
+         member.email = memberEdited.email;
+         
+       }
+      
+       return member;
+    });
+    
+    setMembers(newArray);
+    SetMemberToEdit({});
+    
+
+}  
   
 
   
@@ -45,12 +63,13 @@ function App() {
   return (
     <div className="App">
       <h1>My Team Members</h1>
-      <MemberForm addNewMember={addNewMember} memberToEdit={memberToEdit} />
+      <MemberForm addNewMember={addNewMember} memberToEdit={memberToEdit} updateMember={updateMember} />
       <Members members={members} delMember={delMember} editMember={editMember} />
       
     </div>
   );
 }
+
 
 
 
