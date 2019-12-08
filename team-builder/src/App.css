@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+}
+
+
+
+html,
+body,
+.App,
+#root {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  
+  text-align: center;
+  
+  padding: 32px;
+  letter-spacing: 1px
+}
+
+.member {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  margin: 16px auto;
+  text-align: left;
+  background-color: aquamarine;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+input {
+  width: 200px;
+  padding: 15px 22px;
+  margin: 10px 5px;
+  box-sizing: border-box;  
+  border: 1px solid green;
+  border-radius: 4px;
+}
+button {
+  
+  
+  border: 1px solid green;
+  padding: 10px 15px;
+  font-size: 16px;
+  
+  
+  
+}
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.12), 0 2px 3px 2px rgba(0, 0, 0, 0.24);
+  background:aqua
+}
+button:active {
+  background: blanchedalmond;
+         
+   outline: none;
+}
+
+label {
+  margin-bottom: -12px;
+  text-align: left;
+  width: 200px;
+}
